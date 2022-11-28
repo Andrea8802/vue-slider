@@ -34,27 +34,28 @@ createApp({
     },
     methods: {
         nextImage(){       
-            this.activeImage++    
+            this.activeImage++    ;
             if(this.activeImage >= this.slides.length){
-                this.activeImage = 0
+                this.activeImage = 0;
             }
         },
         prevImage(){        
             if(this.activeImage === 0){
                 this.activeImage = this.slides.length
             }
-            this.activeImage--
+            this.activeImage--;
         },
 
         onClickImage(index){
-            this.activeImage = index
+            this.activeImage = index;
         },
 
         startTime(){
-            this.time = setTimeout(
-                this.activeImage++
-                
-            ,3000)
+            this.time = setTimeout(() => this.nextImage() ,3000);
+        },
+
+        stopTime(){
+            clearTimeout(this.time);
         }
 
     }   
