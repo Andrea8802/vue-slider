@@ -30,7 +30,7 @@
                     <div @click="prevImage" class="prev"></div>
                     <div @click="nextImage" class="next"></div>
 
-                    <div v-for="copertina in slides" class="thumb"  :class="activeImage === index ? 'active' : '' ">
+                    <div v-for="(copertina, index) in slides" class="thumb"  :class="activeImage === index ? 'active' : '' ">
                         <img :src="copertina.images" :alt="slides[activeImage].titles" />
                     </div>
                     

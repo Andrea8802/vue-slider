@@ -43,6 +43,5 @@ createApp({
             }
             this.activeImage--
         }
-
     }   
 }).mount("#app")
