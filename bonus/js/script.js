@@ -34,7 +34,7 @@ createApp({
     },
     methods: {
         nextImage(){       
-            this.activeImage++    ;
+            this.activeImage++;
             if(this.activeImage >= this.slides.length){
                 this.activeImage = 0;
             }
@@ -58,5 +58,6 @@ createApp({
             clearTimeout(this.time);
         }
 
-    }   
+    }  
+     
 }).mount("#app")
