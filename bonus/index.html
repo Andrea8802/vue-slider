@@ -30,8 +30,13 @@
                     <div @click="prevImage" class="prev"></div>
                     <div @click="nextImage" class="next"></div>
 
-                    <div v-for="(copertina, index) in slides" class="thumb"  :class="activeImage === index ? 'active' : '' " @click="onClickImage(index)">
+                    <div v-for="(copertina, index) in slides" 
+                    class="thumb"  :
+                    class="activeImage === index ? 'active' : '' " 
+                    @click="onClickImage(index)">
+
                         <img :src="copertina.images" :alt="slides[activeImage].titles" />
+                        
                     </div>
                     
                     </div>
